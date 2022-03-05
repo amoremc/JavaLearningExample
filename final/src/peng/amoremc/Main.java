@@ -25,7 +25,39 @@ public class Main {
         System.out.println(three.getInstanceNumber());
 
         System.out.println(Math.PI);
-        Math m = new Math();
+//        Math m = new Math(); //class Math cannot be initiated
+
+       // Math m = new Math();
+        //the constructor of Math class is declared as private, no one can instance this class.
+        //also the Math class is declared as final, no subclass(no extension) allowed
+
+
+        int pw = 674312;
+        PassWord password = new PassWord(pw);
+        password.storePassword();
+
+        password.letMeIn(1);
+        password.letMeIn(52366);
+        password.letMeIn(456544);
+        password.letMeIn(63522);
+        password.letMeIn(123456789);
+        password.letMeIn(122783517);
+        password.letMeIn(674312);
+
+        System.out.println("==================================");
+
+        ExtendedPassword extendedPassword = new ExtendedPassword(pw);
+
+        extendedPassword.storePassword();
+        //less secure with final method in parent class. the child class can override the non-final method to any version.
+
+        extendedPassword.letMeIn(1);
+        extendedPassword.letMeIn(52366);
+        extendedPassword.letMeIn(456544);
+        extendedPassword.letMeIn(63522);
+        extendedPassword.letMeIn(123456789);
+        extendedPassword.letMeIn(122783517);
+        extendedPassword.letMeIn(674312);
 
     }
 }

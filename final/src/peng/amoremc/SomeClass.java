@@ -1,7 +1,7 @@
 package peng.amoremc;
 
 public class SomeClass {
-
+//public class otherClass extends Math{}
     private final int exampleNumber  = 1;
     private final int instancelala;
 
@@ -23,4 +23,6 @@ public class SomeClass {
     public int getInstanceNumber() {
         return instanceNumber;
     }
+
+    //mark the methods as final to prevent the method to be overriden in subclassed
 }
