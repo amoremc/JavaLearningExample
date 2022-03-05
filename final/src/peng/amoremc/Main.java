@@ -30,6 +30,7 @@ public class Main {
        // Math m = new Math();
         //the constructor of Math class is declared as private, no one can instance this class.
         //also the Math class is declared as final, no subclass(no extension) allowed
+        System.out.println("==================================");
 
 
         int pw = 674312;
@@ -58,6 +59,11 @@ public class Main {
         extendedPassword.letMeIn(123456789);
         extendedPassword.letMeIn(122783517);
         extendedPassword.letMeIn(674312);
+        System.out.println("==================================");
 
+        System.out.println("Main method called");
+        SIBTest test = new SIBTest();
+        test.someMethod();
+        System.out.println("Owner is " + SIBTest.owner);
     }
 }
